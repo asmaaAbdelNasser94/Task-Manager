@@ -1,0 +1,24 @@
+@use "./theme/shared/css3Variables";
+@use "./theme/theme";
+@use "./fonts/font";
+
+/* ===== Global Styles ===== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: var(--basic-font-size);
+}

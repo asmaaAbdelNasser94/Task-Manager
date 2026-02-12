@@ -1,12 +1,21 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject, OnInit } from '@angular/core';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { LanguageService } from './shared/services/language.service';
+import { button } from '@primeuix/themes/aura/inputnumber';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [TranslateModule],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
-export class App {
-  protected readonly title = signal('task-manager');
+export class App implements OnInit {
+  private _TranslateService = inject(TranslateService);
+  private _LanguageService = inject(LanguageService);
+
+  ngOnInit(): void {
+    this._TranslateService.addLangs(['en', 'ar']);
+    this._LanguageService.initLanguage();
+  }
 }

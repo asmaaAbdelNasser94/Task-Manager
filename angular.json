@@ -30,8 +30,19 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
-            ]
+              "node_modules/primeicons/primeicons.css",
+              "src/styles/tailwind.css",
+              {
+                "bundleName": "app-global",
+                "input": "src/styles/app-global.scss",
+                "inject": true
+              }
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            }
           },
           "configurations": {
             "production": {
