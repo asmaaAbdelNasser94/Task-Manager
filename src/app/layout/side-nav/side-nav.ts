@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-side-nav',
+  selector: 'task-manager-side-nav',
   imports: [],
   templateUrl: './side-nav.html',
   styleUrl: './side-nav.scss',

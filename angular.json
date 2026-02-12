@@ -15,7 +15,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "task-manager",
       "architect": {
         "build": {
           "builder": "@angular/build:application",
@@ -30,17 +30,23 @@
               }
             ],
             "styles": [
-              "node_modules/primeicons/primeicons.css",
               "src/styles/tailwind.css",
+              "node_modules/primeicons/primeicons.css",
               {
                 "bundleName": "app-global",
                 "input": "src/styles/app-global.scss",
+                "inject": true
+              },
+              {
+                "bundleName": "prime-custom-theme",
+                "input": "src/styles/theme/prime-custom-theme/_index.scss",
                 "inject": true
               }
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "src/styles"
+                "src/styles",
+                "src/styles/theme/shared"
               ]
             }
           },

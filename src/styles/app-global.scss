@@ -1,5 +1,6 @@
 @use "./theme/shared/css3Variables";
-@use "./theme/theme";
+@use "./theme/shared/variables";
+@use "./theme/prime-custom-theme";
 @use "./fonts/font";
 
 /* ===== Global Styles ===== */
@@ -21,4 +22,8 @@ body {
   height: 100%;
   overflow: hidden;
   font-size: var(--basic-font-size);
+}
+
+.pi {
+  font-family: "primeicons" !important;
 }
