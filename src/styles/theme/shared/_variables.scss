@@ -2,6 +2,7 @@
 
 // Blues
 $primary-color: var(--color-denim);
+$primary-color-hover: var(--color-denim-hover);
 
 // Neutral greys / whites
 $color-alto: var(--color-alto);
@@ -14,7 +15,6 @@ $color-catskill-white: var(--color-catskill-white);
 $color-apple: var(--color-apple);
 
 // Blacks
-$color-mine-shaft-strong: var(--color-Mine-Shaft);
 $color-black-5: var(--color-black-5);
 
 // Oranges
@@ -26,3 +26,11 @@ $color-panache: var(--color-panache);
 // Reds
 $color-persian-red: var(--color-persian-red);
 $color-lavender-blush: var(--color-lavender-blush);
+
+$bg-weak-100: var(--bg-weak-100);
+
+// box shadows
+$box-shadow-red: var(--box-shadow-red);
+$box-shadow-blue: var(--box-shadow-blue);
+$box-shadow-orange: var(--box-shadow-orange);
+$box-shadow-green: var(--box-shadow-green);

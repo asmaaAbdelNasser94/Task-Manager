@@ -1,0 +1,17 @@
+{
+  "_General_": {
+    "appTitle": "مدير المهام",
+    "searchPlaceholder": "بحث ..."
+  },
+  "_Layout_": {
+    "sideNav": {
+      "dashboard": "لوحة التحكم",
+      "tasks": "المهام",
+      "calendar": "التقويم",
+      "analytics": "التحليلات",
+      "team": "الفريق",
+      "settings": "الإعدادات",
+      "newTask": "+ مهمة جديدة"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+input.p-inputtext {
+    width: 100%;
+    min-height: 2.0625rem;
+    font-size: 0.75rem !important;
+    font-weight: 500;
+    padding-inline-start: 1rem;
+    color: $color-mine-shaft !important;
+    border: 0.0625rem solid $color-alto !important;
+    border-radius: .25rem;
+
+    &::placeholder {
+        color: $color-boulder !important;
+        font-size: 0.75rem !important;
+        font-weight: 400;
+    }
+
+    &:disabled {
+        border: 0 !important;
+        font-size: 0.75rem !important;
+        background: $color-alto !important;
+        color: $color-boulder !important;
+        border-color: $color-alto !important;
+    }
+
+    &:disabled::placeholder {
+        color: $color-boulder !important;
+    }
+
+    &:focus {
+        border: 0.0625rem solid $primary-color !important;
+        box-shadow: 0 0 0 0.0625rem rgba($primary-color, 0.25) !important;
+    }
+}
