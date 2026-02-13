@@ -1,1 +1,7 @@
-<p>dashboard-page-container works!</p>
+<div class="dashboard-page-container">
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 dashboard-statistics">
+        @for (statistic of statistics(); track $index) {
+        <task-manager-statistic-card [data]="statistic"></task-manager-statistic-card>
+        }
+    </div>
+</div>

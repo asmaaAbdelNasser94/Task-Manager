@@ -1,1 +1,3 @@
-<task-manager-dashboard-page-container #dashboardPageContainer />
+<task-manager-dashboard-page-container #dashboardPageContainer [tasks]="tasks()" [statistics]="statistics()"
+    [loadingTasks]="loadingTasks()" [errorTasks]="errorTasks()" [loadingStatistics]="loadingStatistics()"
+    [errorStatistics]="errorStatistics()" />
