@@ -1,1 +1,28 @@
-<p>header works!</p>
+<p-toolbar class="task-manager-header-toolbar" ariaLabel="Main navigation">
+    <ng-template pTemplate="start">
+        <div class="header-logo flex items-center gap-3">
+            <div class="logo-wrapper">
+                <img src="/images/logo.png" alt="Task Manager Logo"/>
+            </div>
+            <span class="header-title">{{"_General_.appTitle" | translate}}</span>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="center">
+        <p-iconfield class="header-search-field">
+            <p-inputicon class="pi pi-search" />
+            <input id="search" type="text" pInputText [placeholder]="'_General_.searchPlaceholder' | translate" />
+        </p-iconfield>
+    </ng-template>
+    <ng-template pTemplate="end">
+        <div class="flex items-center gap-4 header-actions">
+            <button type="button" class="header-lang-btn" (click)="toggleLang()">
+                <span class="pi pi-language" aria-hidden="true"></span>
+                <span class="header-lang-label">{{ langService.currentLang === 'en' ? 'EN' : 'AR' }}</span>
+            </button>
+            <button type="button" class="header-notification-btn">
+                <img src="icons/notification.png" alt="Notifications">
+            </button>
+            <p-avatar label="AS" shape="circle" class="header-avatar" />
+        </div>
+    </ng-template>
+</p-toolbar>

@@ -1,0 +1,17 @@
+@use 'variables' as *;
+
+:host {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: $bg-weak-100;
+}
+
+.layout-sidebar {
+    width: 15rem;
+}
+
+.layout-content {
+    padding: 2rem;
+}

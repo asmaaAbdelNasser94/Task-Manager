@@ -1,0 +1,17 @@
+{
+    "_General_": {
+        "appTitle": "Task Manager",
+        "searchPlaceholder": "Search ..."
+    },
+    "_Layout_": {
+        "sideNav": {
+            "dashboard": "Dashboard",
+            "tasks": "Tasks",
+            "calendar": "Calendar",
+            "analytics": "Analytics",
+            "team": "Team",
+            "settings": "Settings",
+            "newTask": "+ New Task"
+        }
+    }
+}

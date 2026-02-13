@@ -1,0 +1,16 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.task-manager {
+  width: 1.25rem;
+  height: 1.25rem;
+  -webkit-mask-size: contain !important;
+  mask-size: contain !important;
+  background-color: $primary-color;
+
+  &.warning {
+    -webkit-mask: url('/icons/warning.png') no-repeat 50% 50%;
+    mask: url('/icons/warning.png') no-repeat 50% 50%;
+  }
+}
+

@@ -1,0 +1,15 @@
+<div class="layout flex flex-col h-screen">
+
+  <task-manager-header />
+
+  <div class="layout-body flex flex-1 overflow-hidden">
+    <div class="layout-sidebar">
+      <task-manager-side-nav />
+    </div>
+
+    <div class="layout-content flex-1 overflow-auto">
+      <router-outlet />
+    </div>
+  </div>
+
+</div>
