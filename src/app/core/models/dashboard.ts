@@ -1,4 +1,4 @@
-import { ChangeType, TaskPriority, TaskStatus } from "../types/dashboard.type";
+import { ChangeType, TaskPriority, TaskStatus } from "../enums/dashboard.enum";
 
 export interface Statistic {
     id: string;

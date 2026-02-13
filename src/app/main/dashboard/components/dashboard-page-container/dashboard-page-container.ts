@@ -1,5 +1,6 @@
 import { Component, computed, input } from '@angular/core';
 import { Task, TasksResponse } from '../../../../core/models/dashboard';
+import { TaskStatus } from '../../../../core/enums/dashboard.enum';
 
 @Component({
   selector: 'task-manager-dashboard-page-container',
@@ -9,7 +10,9 @@ import { Task, TasksResponse } from '../../../../core/models/dashboard';
 })
 export class DashboardPageContainer {
   public tasks = input<Task[]>();
-  public todoTasks = computed(() => this.tasks()?.filter(t => t.status === 'todo'));
-  public inProgressTasks = computed(() => this.tasks()?.filter(t => t.status === 'in_progress'));
-  public doneTasks = computed(() => this.tasks()?.filter(t => t.status === 'done'));
+
+  // Filter tasks by status
+  public todoTasks = computed(() => this.tasks()?.filter(t => t.status === TaskStatus.TODO));
+  public inProgressTasks = computed(() => this.tasks()?.filter(t => t.status === TaskStatus.IN_PROGRESS));
+  public doneTasks = computed(() => this.tasks()?.filter(t => t.status === TaskStatus.DONE));
 }
