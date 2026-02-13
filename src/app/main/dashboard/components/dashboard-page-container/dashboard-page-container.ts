@@ -1,18 +1,20 @@
 import { Component, computed, input } from '@angular/core';
-import { Task, TasksResponse } from '../../../../core/models/dashboard';
-import { TaskStatus } from '../../../../core/enums/dashboard.enum';
+import { Statistic, Task } from '../../../../core/models/dashboard';
+import { StatisticCard } from "../statistic-card/statistic-card";
 
 @Component({
   selector: 'task-manager-dashboard-page-container',
-  imports: [],
+  imports: [StatisticCard],
   templateUrl: './dashboard-page-container.html',
   styleUrl: './dashboard-page-container.scss',
 })
 export class DashboardPageContainer {
   public tasks = input<Task[]>();
+  public statistics = input<Statistic[]>();
 
-  // Filter tasks by status
-  public todoTasks = computed(() => this.tasks()?.filter(t => t.status === TaskStatus.TODO));
-  public inProgressTasks = computed(() => this.tasks()?.filter(t => t.status === TaskStatus.IN_PROGRESS));
-  public doneTasks = computed(() => this.tasks()?.filter(t => t.status === TaskStatus.DONE));
+  public loadingStatistics = input<boolean>();
+  public errorStatistics = input<Error>();
+
+  public loadingTasks = input<boolean>();
+  public errorTasks = input<Error>();
 }

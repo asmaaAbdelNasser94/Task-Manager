@@ -11,7 +11,13 @@ import { CardModule } from 'primeng/card';
 })
 export class DashboardPage {
   private _DashboardAPIService = inject(DashboardAPIService);
-  
+
   public statistics = computed(() => this._DashboardAPIService.statisticsResource.value()?.statistics ?? []);
   public tasks = computed(() => this._DashboardAPIService.tasksResource.value()?.tasks ?? []);
+
+  public loadingTasks = computed(() => this._DashboardAPIService.tasksResource.isLoading());
+  public errorTasks = computed(() => this._DashboardAPIService.tasksResource.error());
+
+  public loadingStatistics = computed(() => this._DashboardAPIService.statisticsResource.isLoading());
+  public errorStatistics = computed(() => this._DashboardAPIService.statisticsResource.error());
 }

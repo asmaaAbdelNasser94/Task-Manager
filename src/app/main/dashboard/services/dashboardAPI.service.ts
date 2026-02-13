@@ -9,11 +9,8 @@ const TASKS_RESOURCE = 'assets/data/tasks.json';
 @Injectable({
   providedIn: 'root',
 })
+
 export class DashboardAPIService {
   public tasksResource = httpResource<TasksResponse>(() => TASKS_RESOURCE);
   public statisticsResource = httpResource<StatisticsResponse>(() => STATISTICS_RESOURCE);
-
-  public tasks = computed(() => this.tasksResource.value()?.tasks ?? []);
-  public loading = computed(() => this.tasksResource.isLoading());
-  public error = computed(() => this.tasksResource.error());
 }
