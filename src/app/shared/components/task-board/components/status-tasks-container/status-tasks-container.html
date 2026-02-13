@@ -1,0 +1,14 @@
+<div class="status-column">
+  <div class="header">
+    <h3 class="title">
+      {{ '_Shared.tasks.status.' + taskStatus() | translate }}
+    </h3>
+    <span class="count">{{ taskCount() }}</span>
+  </div>
+
+  <div class="tasks">
+    @for (task of tasks(); track task.id) {
+      <task-manager-task-card [task]="task" />
+    }
+  </div>
+</div>

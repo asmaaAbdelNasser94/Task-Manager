@@ -1,17 +1,46 @@
 {
-    "_General_": {
-        "appTitle": "Task Manager",
-        "searchPlaceholder": "Search ..."
-    },
-    "_Layout_": {
-        "sideNav": {
-            "dashboard": "Dashboard",
-            "tasks": "Tasks",
-            "calendar": "Calendar",
-            "analytics": "Analytics",
-            "team": "Team",
-            "settings": "Settings",
-            "newTask": "+ New Task"
-        }
+  "_General_": {
+    "appTitle": "Task Manager",
+    "searchPlaceholder": "Search ..."
+  },
+  "_Layout_": {
+    "sideNav": {
+      "dashboard": "Dashboard",
+      "tasks": "Tasks",
+      "calendar": "Calendar",
+      "analytics": "Analytics",
+      "team": "Team",
+      "settings": "Settings",
+      "newTask": "+ New Task"
     }
+  },
+  "_Dashboard_": {},
+  "_Shared": {
+    "tasks": {
+      "status": {
+        "all": "All",
+        "todo": "To Do",
+        "in_progress": "In Progress",
+        "done": "Done"
+      },
+      "priority": {
+        "title": "Priority",
+        "low": "Low",
+        "medium": "Medium",
+        "high": "High",
+        "all": "All"
+      },
+      "date": {
+        "completedToday": "Completed today",
+        "completedYesterday": "Completed yesterday",
+        "completedDaysAgo": "Completed {{days}} days ago",
+        "overdueBy": "Overdue by {{days}} days",
+        "dueToday": "Due today",
+        "dueTomorrow": "Due tomorrow",
+        "dueInDays": "Due in {{days}} days",
+        "dueInWeek": "Due in 1 week",
+        "dueInWeeks": "Due in {{weeks}} weeks"
+      }
+    }
+  }
 }

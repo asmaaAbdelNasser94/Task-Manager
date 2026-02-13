@@ -8,7 +8,11 @@ import { sideMenuItems } from './side-nav-menu-items';
 
 @Component({
   selector: 'task-manager-side-nav',
-  imports: [TranslateModule, PanelMenuModule, ButtonModule],
+  imports: [
+    TranslateModule,
+    PanelMenuModule,
+    ButtonModule
+  ],
   templateUrl: './side-nav.html',
   styleUrl: './side-nav.scss',
 })

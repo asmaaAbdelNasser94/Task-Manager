@@ -7,9 +7,9 @@
 
 .side-nav {
   background-color: $color-white;
-  border-right: 1px solid $color-alto;
   height: 100%;
   padding: 1.5rem;
+  box-shadow: $box-shadow-light;
 }
 
 // PanelMenu overrides

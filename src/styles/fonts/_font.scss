@@ -1,11 +1,10 @@
-@use "./Inter/inter.scss";
-
 body {
   font-family: var(--font-family), sans-serif;
 
   :dir(rtl) {
     font-family: var(--font-family-ar), sans-serif;
   }
+
   :dir(ltr) {
     font-family: var(--font-family), sans-serif;
   }

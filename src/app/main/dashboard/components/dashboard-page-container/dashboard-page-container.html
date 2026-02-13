@@ -1,7 +1,10 @@
-<div class="dashboard-page-container">
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 dashboard-statistics">
+<div class="flex flex-row flex-wrap gap-8 dashboard-page-container">
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 w-full dashboard-statistics">
         @for (statistic of statistics(); track $index) {
         <task-manager-statistic-card [data]="statistic"></task-manager-statistic-card>
         }
+    </div>
+    <div class="w-full dashboard-tasks">
+        <task-manager-task-board #taskBoard />
     </div>
 </div>

@@ -1,0 +1,47 @@
+@use "variables" as *;
+
+p-splitbutton {
+    height: 2rem;
+
+    .p-splitbutton {
+        .p-splitbutton-dropdown {
+            border-radius: .25rem;
+        }
+
+
+    }
+
+    .p-button-secondary {
+        background-color: transparent;
+        border: .0625rem solid $color-alto;
+
+        &.p-splitbutton-dropdown {
+            border-inline-start: none;
+
+            &:hover {
+                border-inline-start: none;
+                background-color: $color-alto !important;
+            }
+        }
+
+    }
+
+    .p-button-secondary:not(:disabled):hover {
+        background-color: transparent;
+    }
+
+    .p-splitbutton-button {
+
+        .p-button-label {
+            font-size: 0.875rem;
+            font-weight: 400;
+            color: $color-mine-shaft;
+            text-transform: capitalize;
+        }
+    }
+
+    .p-icon {
+        width: 0.75rem !important;
+        height: 0.75rem !important;
+    }
+}
