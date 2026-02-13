@@ -13,5 +13,22 @@
       "settings": "الإعدادات",
       "newTask": "+ مهمة جديدة"
     }
+  },
+  "_Dashboard_": {},
+  "_Shared": {
+    "tasks": {
+      "status": {
+        "all": "الكل",
+        "todo": "لم يتم التنفيذ",
+        "in_progress": "قيد التنفيذ",
+        "done": "مكتملة"
+      },
+      "priority": {
+        "title": "الاولوية",
+        "low": "منخفضة",
+        "medium": "متوسطة",
+        "high": "عالية"
+      }
+    }
   }
 }
