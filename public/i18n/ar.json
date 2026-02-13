@@ -27,7 +27,19 @@
         "title": "الاولوية",
         "low": "منخفضة",
         "medium": "متوسطة",
-        "high": "عالية"
+        "high": "عالية",
+        "all": "الكل"
+      },
+      "date": {
+        "completedToday": "اكتمل اليوم",
+        "completedYesterday": "اكتمل أمس",
+        "completedDaysAgo": "اكتمل منذ {{days}} أيام",
+        "overdueBy": "متأخر بـ {{days}} أيام",
+        "dueToday": "مستحق اليوم",
+        "dueTomorrow": "مستحق غداً",
+        "dueInDays": "مستحق خلال {{days}} أيام",
+        "dueInWeek": "مستحق خلال أسبوع",
+        "dueInWeeks": "مستحق خلال {{weeks}} أسابيع"
       }
     }
   }

@@ -1,0 +1,160 @@
+@use 'variables' as *;
+
+:host {
+  display: block;
+
+  .task-card {
+    padding: 1rem;
+    background-color: $color-white;
+    border-radius: 0.5rem;
+    box-shadow: $box-shadow-light;
+    border: .0625rem solid $color-alto;
+    transition: all 0.5s ease;
+
+    &:hover {
+      &.todo {
+        border-color: $primary-color;
+        box-shadow: $box-shadow-blue;
+      }
+
+      &.in-progress {
+        border-color: $color-blaze-orange;
+        box-shadow: $box-shadow-orange;
+      }
+
+      &.done {
+        border-color: $color-apple;
+        box-shadow: $box-shadow-green;
+      }
+
+      &.overdue {
+        border-color: $color-persian-red;
+        box-shadow: $box-shadow-red;
+      }
+    }
+
+    &.overdue {
+      border-inline-start-width: .1875rem;
+      border-left-color: $color-persian-red;
+      background-color: $color-lavender-blush;
+    }
+
+    .header {
+      margin-bottom: 0.75rem;
+    }
+
+    .priority {
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .0313rem;
+
+      &.priority-high {
+        background-color: $color-lavender-blush;
+        color: $color-persian-red;
+      }
+
+      &.priority-medium {
+        background-color: $color-sazerac;
+        color: $color-gold-drop;
+      }
+
+      &.priority-low {
+        background-color: #E3F2FD;
+        color: $primary-color;
+      }
+    }
+
+    .title {
+      font-size: .85rem;
+      font-weight: 700;
+      color: $color-mine-shaft;
+      margin-bottom: .2813rem;
+      line-height: 1.4;
+    }
+
+    .description {
+      font-size: 0.75rem;
+      color: $color-boulder;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: .9063rem;
+      overflow: hidden;
+    }
+
+    .date {
+      display: flex;
+      align-items: center;
+      gap: 0.375rem;
+      font-size: 0.7188rem;
+      margin-bottom: 0.375rem;
+      color: $color-boulder;
+
+      i {
+        font-size: 0.8125rem;
+      }
+    }
+
+    .tag {
+      display: inline-block;
+      font-weight: 400;
+      font-size: 0.75rem;
+      color: $color-boulder;
+      margin-bottom: 1rem;
+    }
+
+    .assignee {
+      display: flex;
+      align-items: center;
+      gap: .25rem;
+      padding-top: 1rem;
+      border-top: .0625rem solid $color-alto;
+    }
+
+    .avatar {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      color: $color-white;
+      font-size: 0.625rem;
+      font-weight: 700;
+    }
+
+    .assignee-name {
+      font-size: 0.75rem;
+      color: $color-mine-shaft;
+      font-weight: 400;
+    }
+
+    // Skeleton spacing to match card content layout
+    .skeleton-header {
+      margin-bottom: 0.75rem;
+    }
+
+    .skeleton-title {
+      margin-bottom: 0.2813rem;
+    }
+
+    .skeleton-description {
+      margin-bottom: 0.9063rem;
+    }
+
+    .skeleton-date {
+      margin-bottom: 0.375rem;
+    }
+
+    .skeleton-tag {
+      margin-bottom: 1rem;
+    }
+
+    .skeleton-assignee {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding-top: 1rem;
+      border-top: 0.0625rem solid $color-alto;
+    }
+  }
+}

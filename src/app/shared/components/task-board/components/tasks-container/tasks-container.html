@@ -1,5 +1,5 @@
 <div class="flex flex-row flex-wrap gap-8 tasks-container">
-@for (status of objkeys(taskStatus).slice(1); track $index) {
+  @for (status of visibleStatuses(); track status) {
     <task-manager-status-tasks-container [tasks]="getTasksByStatus(status)" [taskStatus]="status" />
-}
+  }
 </div>

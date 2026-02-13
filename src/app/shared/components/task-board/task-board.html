@@ -4,13 +4,13 @@
             [(ngModel)]="selectedTaskStatus" optionLabel="label" optionValue="value" aria-labelledby="basic" />
 
         <div class="flex flex-row gap-2 items-center">
-            <p-splitbutton [label]="'_Shared.tasks.priority.title' | translate" [model]="priorityMenuItems"
+            <p-splitbutton [label]="selectedPriorityLabel()" [model]="priorityMenuItems"
                 severity="secondary" [appendTo]="'body'" />
             <p-button type="button" severity="primary" [label]="'_Layout_.sideNav.newTask' | translate"></p-button>
         </div>
     </div>
 
     <div class="w-full task-board-tasks-container">
-        <task-manager-tasks-container #taskManagerTasksContainer [tasks]="tasks()" />
+        <task-manager-tasks-container [tasks]="filteredTasks()" [selectedStatus]="selectedTaskStatus" />
     </div>
 </div>

@@ -1,7 +1,7 @@
-import { Component, input } from '@angular/core';
+import { Component, computed, input } from '@angular/core';
 import { Task } from '../../../../../core/models/dashboard';
 import { TaskStatus } from '../../../../../core/enums/dashboard.enum';
-import { StatusTasksContainer } from "../status-tasks-container/status-tasks-container";
+import { StatusTasksContainer } from '../status-tasks-container/status-tasks-container';
 
 @Component({
   selector: 'task-manager-tasks-container',
@@ -10,14 +10,17 @@ import { StatusTasksContainer } from "../status-tasks-container/status-tasks-con
   styleUrl: './tasks-container.scss',
 })
 export class TasksContainer {
-  public tasks = input<Task[]>();
+  private readonly allStatuses: TaskStatus[] = [TaskStatus.TODO, TaskStatus.IN_PROGRESS, TaskStatus.DONE];
 
-  public taskStatus = TaskStatus;
-  public objkeys = Object.keys;
+  public tasks = input.required<Task[]>();
+  public selectedStatus = input<TaskStatus | null>(null);
 
-  public getTasksByStatus(status: string) {
-    if (!this.tasks()) return [];
-    return this.tasks()?.filter(task => task.status === TaskStatus[status as keyof typeof TaskStatus]);
+  public visibleStatuses = computed(() => {
+    const status = this.selectedStatus();
+    return status === null ? this.allStatuses : [status];
+  });
+
+  public getTasksByStatus(status: TaskStatus): Task[] {
+    return this.tasks()?.filter(task => task.status === status) ?? [];
   }
-
 }

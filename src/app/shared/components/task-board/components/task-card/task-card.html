@@ -1,1 +1,41 @@
-<p>task-card works!</p>
+<div class="task-card" [class.overdue]="isOverdue()" [ngClass]="statusClass()">
+  @if (!loading()) {
+    <div class="flex justify-between items-start mb-3 header">
+      <span [class]="'priority ' + priorityClass()">
+        {{ '_Shared.tasks.priority.' + task().priority | translate }}
+      </span>
+      <button class="menu-btn" type="button">
+        <i class="pi pi-ellipsis-v"></i>
+      </button>
+    </div>
+
+    <h4 class="title">{{ task().title }}</h4>
+    <p class="description">{{ task().description | ellipsis : 50 }}</p>
+
+    <div [class]="'date ' + dateInfo().cssClass">
+      <i [class]="dateInfo().icon"></i>
+      <span>{{ dateInfo().key | translate:dateInfo().params }}</span>
+    </div>
+
+    @if (firstTag()) {
+      <span class="tag">{{ firstTag() }}</span>
+    }
+
+    <div class="assignee">
+      <span class="flex items-center justify-center avatar" [style.background-color]="avatarColor()">
+        {{ task().assignee.avatar }}
+      </span>
+      <span class="assignee-name">&#64;{{ assigneeFirstName() }}</span>
+    </div>
+  } @else {
+    <div class="skeleton-header"><p-skeleton height="1.25rem" width="4rem"></p-skeleton></div>
+    <div class="skeleton-title"><p-skeleton height="1rem"></p-skeleton></div>
+    <div class="skeleton-description"><p-skeleton height="2.5rem"></p-skeleton></div>
+    <div class="skeleton-date"><p-skeleton height="0.875rem" width="8rem"></p-skeleton></div>
+    <div class="skeleton-tag"><p-skeleton height="0.875rem" width="5rem"></p-skeleton></div>
+    <div class="skeleton-assignee">
+      <p-skeleton shape="circle" width="1.5rem" height="1.5rem"></p-skeleton>
+      <p-skeleton height="0.875rem" width="4rem"></p-skeleton>
+    </div>
+  }
+</div>
