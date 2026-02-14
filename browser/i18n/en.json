@@ -1,0 +1,83 @@
+{
+  "_General": {
+    "appTitle": "Task Manager",
+    "searchPlaceholder": "Search ...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "yes": "Yes",
+    "no": "No",
+    "confirmDelete": "Confirm Delete",
+    "confirmDeleteMessage": "Are you sure you want to delete this task?"
+  },
+  "_Layout": {
+    "sideNav": {
+      "dashboard": "Dashboard",
+      "tasks": "Tasks",
+      "calendar": "Calendar",
+      "analytics": "Analytics",
+      "team": "Team",
+      "settings": "Settings",
+      "newTask": "New Task"
+    }
+  },
+  "_Dashboard": {
+    "totalTasks": "Total Tasks",
+    "inProgress": "In Progress",
+    "Overdue": "Overdue",
+    "completed": "Completed",
+    "thisWeek": "this week",
+    "today": "today",
+    "sameAsYesterday": "Same as yesterday"
+  },
+  "_Analytics": {
+    "tasksAnalytics": "Tasks Analytics"
+  },
+  "_Shared": {
+    "tasks": {
+      "addTask": "Add Task",
+      "editTask": "Edit Task",
+      "addEdit": {
+        "title": "Task Title",
+        "titlePlaceholder": "Enter task title",
+        "description": "Description",
+        "descriptionPlaceholder": "Enter task description",
+        "priority": "Priority",
+        "priorityPlaceholder": "Select priority",
+        "status": "Status",
+        "statusPlaceholder": "Select status",
+        "dueDate": "Due Date",
+        "dueDatePlaceholder": "Select due date",
+        "assignee": "Assignee",
+        "assigneePlaceholder": "Select assignee",
+        "tag": "Tag",
+        "tagPlaceholder": "Select tag"
+      },
+      "status": {
+        "all": "All",
+        "todo": "To Do",
+        "in_progress": "In Progress",
+        "done": "Done"
+      },
+      "priority": {
+        "title": "Priority",
+        "low": "Low",
+        "medium": "Medium",
+        "high": "High",
+        "all": "All"
+      },
+      "date": {
+        "completedToday": "Completed today",
+        "completedYesterday": "Completed yesterday",
+        "completedDaysAgo": "Completed {{days}} days ago",
+        "overdueBy": "Overdue by {{days}} days",
+        "dueToday": "Due today",
+        "dueTomorrow": "Due tomorrow",
+        "dueInDays": "Due in {{days}} days",
+        "dueInWeek": "Due in 1 week",
+        "dueInWeeks": "Due in {{weeks}} weeks"
+      }
+    }
+  }
+}
