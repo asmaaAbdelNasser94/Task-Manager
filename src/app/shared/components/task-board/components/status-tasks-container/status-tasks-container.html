@@ -8,7 +8,11 @@
 
   <div class="tasks">
     @for (task of tasks(); track task.id) {
-      <task-manager-task-card [task]="task" />
+      <task-manager-task-card
+        [task]="task"
+        (onEdit)="onEditTask.emit($event)"
+        (onDelete)="onDeleteTask.emit($event)"
+      />
     }
   </div>
 </div>

@@ -26,6 +26,16 @@ p-button {
         background-color: $color-alto;
         border-color: $color-alto;
       }
+
+      @media screen and (max-width: 768px) {
+        .pi.pi-plus.p-button-icon {
+          padding: 0.4rem 0.2rem;
+
+          & + span {
+            display: none;
+          }
+        }
+      }
     }
 
     &.p-button-secondary {

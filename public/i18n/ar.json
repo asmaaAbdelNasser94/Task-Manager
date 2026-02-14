@@ -5,7 +5,11 @@
     "save": "حفظ",
     "cancel": "الغاء",
     "delete": "حذف",
-    "edit": "تعديل"
+    "edit": "تعديل",
+    "yes": "نعم",
+    "no": "لا",
+    "confirmDelete": "تأكيد الحذف",
+    "confirmDeleteMessage": "هل أنت متأكد أنك تريد حذف هذه المهمة؟"
   },
   "_Layout": {
     "sideNav": {
