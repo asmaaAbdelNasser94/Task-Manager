@@ -1,6 +1,6 @@
 import { Component, computed, input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { Task } from '../../../../../core/models/dashboard';
+import { Task } from '../../../../../core/models/dashboard.model';
 import { TaskCard } from '../task-card/task-card';
 
 @Component({

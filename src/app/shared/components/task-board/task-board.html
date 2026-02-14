@@ -1,16 +1,66 @@
 <div class="flex flex-row flex-wrap gap-8 task-board-container">
-    <div class="flex flex-row justify-between w-full task-board-tasks-filter">
-        <p-selectbutton class="w-full task-board-select-button" [options]="taskStatusOptions()" [allowEmpty]="false"
-            [(ngModel)]="selectedTaskStatus" optionLabel="label" optionValue="value" aria-labelledby="basic" />
+  <div class="flex flex-row justify-between w-full task-board-tasks-filter">
+    <p-selectbutton
+      class="w-full task-board-select-button"
+      [options]="taskStatusOptions()"
+      [allowEmpty]="false"
+      [(ngModel)]="selectedTaskStatus"
+      optionLabel="label"
+      optionValue="value"
+      aria-labelledby="basic"
+    />
 
-        <div class="flex flex-row gap-2 items-center">
-            <p-splitbutton [label]="selectedPriorityLabel()" [model]="priorityMenuItems()"
-                severity="secondary" [appendTo]="'body'" />
-            <p-button type="button" severity="primary" [label]="'_Layout.sideNav.newTask' | translate"></p-button>
-        </div>
+    <div class="flex flex-row gap-2 items-center">
+      <p-splitbutton
+        [label]="selectedPriorityLabel()"
+        [model]="priorityMenuItems()"
+        severity="secondary"
+        [appendTo]="'body'"
+      />
+      <p-button
+        type="button"
+        severity="primary"
+        [label]="'_Layout.sideNav.newTask' | translate"
+        (click)="showAddEditTaskFormDialog = true"
+        icon="pi pi-plus"
+      ></p-button>
     </div>
+  </div>
 
-    <div class="w-full task-board-tasks-container">
-        <task-manager-tasks-container [tasks]="filteredTasks()" [selectedStatus]="selectedTaskStatus" />
-    </div>
+  <div class="w-full task-board-tasks-container">
+    <task-manager-tasks-container [tasks]="filteredTasks()" [selectedStatus]="selectedTaskStatus" />
+  </div>
 </div>
+
+<p-dialog
+  [header]="'_Shared.tasks.addTask' | translate"
+  [modal]="true"
+  [(visible)]="showAddEditTaskFormDialog"
+  [breakpoints]="{ '1199px': '75vw', '35.93rem': '90vw' }"
+  [style]="{ width: '35rem' }"
+  [draggable]="false"
+  [resizable]="false"
+>
+  <task-manager-add-edit-task-form
+    #addEditTaskForm
+    (onCancel)="showAddEditTaskFormDialog = false"
+  />
+  <ng-template #footer>
+    <div class="flex flex-row gap-6 form-actions">
+      <p-button
+        type="submit"
+        severity="primary"
+        [label]="'_General.save' | translate"
+        [disabled]="addEditTaskForm.formGroup.invalid"
+        (onClick)="submit()"
+      ></p-button>
+      <p-button
+        type="button"
+        severity="secondary"
+        [label]="'_General.cancel' | translate"
+        (click)="showAddEditTaskFormDialog = false"
+        styleClass="cancel"
+      ></p-button>
+    </div>
+  </ng-template>
+</p-dialog>

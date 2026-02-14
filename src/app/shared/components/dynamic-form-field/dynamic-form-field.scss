@@ -1,0 +1,22 @@
+@use 'variables' as *;
+
+:host {
+  .field-input {
+    margin-bottom: 0.75rem;
+
+    textarea {
+      resize: none;
+    }
+  }
+
+  .field-label {
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: $color-mine-shaft;
+  }
+
+  .required-control-flag {
+    color: $primary-color;
+  }
+}

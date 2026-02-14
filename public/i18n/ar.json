@@ -1,7 +1,11 @@
 {
-  "_General_": {
+  "_General": {
     "appTitle": "مدير المهام",
-    "searchPlaceholder": "بحث ..."
+    "searchPlaceholder": "بحث ...",
+    "save": "حفظ",
+    "cancel": "الغاء",
+    "delete": "حذف",
+    "edit": "تعديل"
   },
   "_Layout": {
     "sideNav": {
@@ -11,7 +15,7 @@
       "analytics": "التحليلات",
       "team": "الفريق",
       "settings": "الإعدادات",
-      "newTask": "+ مهمة جديدة"
+      "newTask": "مهمة جديدة"
     }
   },
   "_Dashboard": {
@@ -28,6 +32,24 @@
   },
   "_Shared": {
     "tasks": {
+      "addTask": "اضافة مهمة",
+      "editTask": "تعديل مهمة",
+      "addEdit": {
+        "title": "عنوان المهمة",
+        "titlePlaceholder": "أدخل عنوان المهمة",
+        "description": "الوصف",
+        "descriptionPlaceholder": "أدخل وصف المهمة",
+        "priority": "الأولوية",
+        "priorityPlaceholder": "اختر الأولوية",
+        "status": "الحالة",
+        "statusPlaceholder": "اختر الحالة",
+        "dueDate": "تاريخ الاستحقاق",
+        "dueDatePlaceholder": "اختر تاريخ الاستحقاق",
+        "assignee": "الموظف",
+        "assigneePlaceholder": "اختر الموظف",
+        "tag": "التصنيف",
+        "tagPlaceholder": "اختر التصنيف"
+      },
       "status": {
         "all": "الكل",
         "todo": "لم يتم التنفيذ",

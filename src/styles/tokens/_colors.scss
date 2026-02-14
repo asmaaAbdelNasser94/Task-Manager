@@ -1,33 +1,32 @@
 :root {
+  /* Neutral greys / whites */
+  --color-alto: #e0e0e0;
+  --color-boulder: #757575;
+  --color-mine-shaft: #363636;
+  --color-white: #ffffff;
+  --color-catskill-white: #eef6f7;
 
-    /* Neutral greys / whites */
-    --color-alto: #E0E0E0;
-    --color-boulder: #757575;
-    --color-mine-shaft: #363636;
-    --color-white: #FFFFFF;
-    --color-catskill-white: #eef6f7;
+  /* Greens */
+  --color-apple: #388e3c;
 
-    /* Greens */
-    --color-apple: #388E3C;
+  /* Blacks */
+  --color-Mine-Shaft: #212121;
+  --color-black-5: rgba(0, 0, 0, 0.05);
 
-    /* Blacks */
-    --color-Mine-Shaft: #212121;
-    --color-black-5: rgba(0, 0, 0, 0.05);
+  /* Oranges */
+  --color-blaze-orange: #ff6600;
+  --color-gold-drop: #f57c00;
+  --color-sazerac: #fff3e0;
+  --color-panache: #fff3e0;
 
-    /* Oranges */
-    --color-blaze-orange: #ff6600;
-    --color-gold-drop: #F57C00;
-    --color-sazerac: #FFF3E0;
-    --color-panache: #FFF3E0;
+  /* Reds */
+  --color-persian-red: #d32f2f;
+  --color-lavender-blush: #ffebee;
 
-    /* Reds */
-    --color-persian-red: #D32F2F;
-    --color-lavender-blush: #FFEBEE;
+  /* Blues */
+  --color-denim: #1976d2;
+  --color-denim-hover: #1565c0;
+  --color-denim-lighter: #e1f5fe;
 
-    /* Blues */
-    --color-denim: #1976D2;
-    --color-denim-hover : #1565C0;
-
-
-    --bg-weak-100: #F5F7FA;
+  --bg-weak-100: #f5f7fa;
 }

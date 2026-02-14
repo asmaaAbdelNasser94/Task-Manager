@@ -1,7 +1,11 @@
 {
-  "_General_": {
+  "_General": {
     "appTitle": "Task Manager",
-    "searchPlaceholder": "Search ..."
+    "searchPlaceholder": "Search ...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit"
   },
   "_Layout": {
     "sideNav": {
@@ -11,7 +15,7 @@
       "analytics": "Analytics",
       "team": "Team",
       "settings": "Settings",
-      "newTask": "+ New Task"
+      "newTask": "New Task"
     }
   },
   "_Dashboard": {
@@ -28,6 +32,24 @@
   },
   "_Shared": {
     "tasks": {
+      "addTask": "Add Task",
+      "editTask": "Edit Task",
+      "addEdit": {
+        "title": "Task Title",
+        "titlePlaceholder": "Enter task title",
+        "description": "Description",
+        "descriptionPlaceholder": "Enter task description",
+        "priority": "Priority",
+        "priorityPlaceholder": "Select priority",
+        "status": "Status",
+        "statusPlaceholder": "Select status",
+        "dueDate": "Due Date",
+        "dueDatePlaceholder": "Select due date",
+        "assignee": "Assignee",
+        "assigneePlaceholder": "Select assignee",
+        "tag": "Tag",
+        "tagPlaceholder": "Select tag"
+      },
       "status": {
         "all": "All",
         "todo": "To Do",
