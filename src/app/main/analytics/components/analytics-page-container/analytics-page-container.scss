@@ -1,0 +1,14 @@
+@use 'variables' as *;
+
+:host {
+    .title {
+        font-size: 1.2063rem;
+        font-weight: 500;
+        color: $color-mine-shaft;
+        margin-bottom: 1rem;
+    }
+
+    .chart-container {
+        margin-bottom: 1rem;
+    }
+}

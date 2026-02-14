@@ -1,0 +1,10 @@
+<div class="flex flex-row flex-wrap gap-8 analytics-page-container">
+    <p-card class="w-full md:w-1/2">
+        <div class="title text-center">
+            {{"_Analytics.tasksAnalytics" | translate}}
+        </div>
+        <div class="flex flex-row justify-center chart-container">
+            <p-chart type="doughnut" [data]="data" [options]="options" class="w-full md:w-96" />
+        </div>
+    </p-card>
+</div>

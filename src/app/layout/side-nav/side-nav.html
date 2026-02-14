@@ -1,6 +1,6 @@
 <nav class="side-nav flex flex-col h-full gap-13">
-  <p-panelmenu [model]="sideMenuItems" class="side-nav-panel-menu" [multiple]="false" />
+  <p-panelmenu [model]="sideMenuItems()" class="side-nav-panel-menu" [multiple]="false" />
 
   <p-button type="button" severity="primary" styleClass="full-width"
-    [label]="'_Layout_.sideNav.newTask' | translate"></p-button>
+    [label]="'_Layout.sideNav.newTask' | translate"></p-button>
 </nav>

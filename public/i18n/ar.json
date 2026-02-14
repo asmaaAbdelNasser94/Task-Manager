@@ -3,7 +3,7 @@
     "appTitle": "مدير المهام",
     "searchPlaceholder": "بحث ..."
   },
-  "_Layout_": {
+  "_Layout": {
     "sideNav": {
       "dashboard": "لوحة التحكم",
       "tasks": "المهام",
@@ -14,7 +14,18 @@
       "newTask": "+ مهمة جديدة"
     }
   },
-  "_Dashboard_": {},
+  "_Dashboard": {
+    "totalTasks": "مجموع المهام",
+    "inProgress": "قيد التنفيذ",
+    "Overdue": "متأخرة",
+    "completed": "مكتملة",
+    "thisWeek": "هذا الأسبوع",
+    "today": "اليوم",
+    "sameAsYesterday": "مثل الأمس"
+  },
+  "_Analytics": {
+    "tasksAnalytics": "تحليل المهام"
+  },
   "_Shared": {
     "tasks": {
       "status": {

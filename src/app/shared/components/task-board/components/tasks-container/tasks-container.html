@@ -1,4 +1,4 @@
-<div class="flex flex-row flex-wrap gap-8 tasks-container">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8  tasks-container">
   @for (status of visibleStatuses(); track status) {
     <task-manager-status-tasks-container [tasks]="getTasksByStatus(status)" [taskStatus]="status" />
   }

@@ -3,7 +3,7 @@
     "appTitle": "Task Manager",
     "searchPlaceholder": "Search ..."
   },
-  "_Layout_": {
+  "_Layout": {
     "sideNav": {
       "dashboard": "Dashboard",
       "tasks": "Tasks",
@@ -14,7 +14,18 @@
       "newTask": "+ New Task"
     }
   },
-  "_Dashboard_": {},
+  "_Dashboard": {
+    "totalTasks": "Total Tasks",
+    "inProgress": "In Progress",
+    "Overdue": "Overdue",
+    "completed": "Completed",
+    "thisWeek": "this week",
+    "today": "today",
+    "sameAsYesterday": "Same as yesterday"
+  },
+  "_Analytics": {
+    "tasksAnalytics": "Tasks Analytics"
+  },
   "_Shared": {
     "tasks": {
       "status": {

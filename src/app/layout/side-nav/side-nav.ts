@@ -1,10 +1,10 @@
-import { Component, inject, OnInit, OnDestroy } from '@angular/core';
+import { Component, inject, computed, Signal } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { ButtonModule } from 'primeng/button';
 import { MenuItem } from 'primeng/api';
-import { Subscription } from 'rxjs';
 import { sideMenuItems } from './side-nav-menu-items';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'task-manager-side-nav',
@@ -16,21 +16,12 @@ import { sideMenuItems } from './side-nav-menu-items';
   templateUrl: './side-nav.html',
   styleUrl: './side-nav.scss',
 })
-export class SideNav implements OnInit, OnDestroy {
+export class SideNav {
   private _TranslateService = inject(TranslateService);
-  private langChangeSub!: Subscription;
+  private langChange = toSignal(this._TranslateService.onLangChange);
 
-  public sideMenuItems: MenuItem[] = [];
-
-  ngOnInit(): void {
-    this.sideMenuItems = sideMenuItems(this._TranslateService);
-
-    this.langChangeSub = this._TranslateService.onLangChange.subscribe(() => {
-      this.sideMenuItems = sideMenuItems(this._TranslateService);
-    });
-  }
-
-  ngOnDestroy(): void {
-    this.langChangeSub?.unsubscribe();
-  }
+  public sideMenuItems: Signal<MenuItem[]> = computed(() => {
+    this.langChange(); // re-evaluate when language changes
+    return sideMenuItems(this._TranslateService);
+  });
 }

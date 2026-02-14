@@ -1,12 +1,12 @@
 <div class="flex flex-row flex-wrap gap-8 task-board-container">
     <div class="flex flex-row justify-between w-full task-board-tasks-filter">
-        <p-selectbutton class="w-full task-board-select-button" [options]="taskStatusOptions" [allowEmpty]="false"
+        <p-selectbutton class="w-full task-board-select-button" [options]="taskStatusOptions()" [allowEmpty]="false"
             [(ngModel)]="selectedTaskStatus" optionLabel="label" optionValue="value" aria-labelledby="basic" />
 
         <div class="flex flex-row gap-2 items-center">
-            <p-splitbutton [label]="selectedPriorityLabel()" [model]="priorityMenuItems"
+            <p-splitbutton [label]="selectedPriorityLabel()" [model]="priorityMenuItems()"
                 severity="secondary" [appendTo]="'body'" />
-            <p-button type="button" severity="primary" [label]="'_Layout_.sideNav.newTask' | translate"></p-button>
+            <p-button type="button" severity="primary" [label]="'_Layout.sideNav.newTask' | translate"></p-button>
         </div>
     </div>
 

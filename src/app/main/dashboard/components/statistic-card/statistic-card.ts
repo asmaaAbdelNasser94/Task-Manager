@@ -1,5 +1,6 @@
 import { Component, input, signal, Signal, WritableSignal } from '@angular/core';
 import { Card } from 'primeng/card';
+import { TranslateModule } from '@ngx-translate/core';
 import { Statistic } from '../../../../core/models/dashboard';
 import { ChangeType } from '../../../../core/enums/dashboard.enum';
 import { CHANGE_TYPE_CLASS } from './change-type.config';
@@ -9,7 +10,8 @@ import { SkeletonModule } from 'primeng/skeleton';
   selector: 'task-manager-statistic-card',
   imports: [
     Card,
-    SkeletonModule
+    SkeletonModule,
+    TranslateModule
   ],
   templateUrl: './statistic-card.html',
   styleUrl: './statistic-card.scss',
