@@ -4,17 +4,22 @@
       <span [class]="'priority ' + priorityClass()">
         {{ '_Shared.tasks.priority.' + task().priority | translate }}
       </span>
-      <button class="menu-btn" type="button">
-        <i class="pi pi-ellipsis-v"></i>
-      </button>
+      <p-menu #menu [model]="actionItems" [popup]="true" />
+      <p-button
+        (click)="menu.toggle($event)"
+        icon="pi pi-ellipsis-v"
+        severity="secondary"
+        [text]="true"
+        class="w-auto h-auto"
+      />
     </div>
 
     <h4 class="title">{{ task().title }}</h4>
-    <p class="description">{{ task().description | ellipsis : 50 }}</p>
+    <p class="description">{{ task().description | ellipsis: 50 }}</p>
 
     <div [class]="'date ' + dateInfo().cssClass">
       <i [class]="dateInfo().icon"></i>
-      <span>{{ dateInfo().key | translate:dateInfo().params }}</span>
+      <span>{{ dateInfo().key | translate: dateInfo().params }}</span>
     </div>
 
     @if (firstTag()) {
@@ -22,7 +27,10 @@
     }
 
     <div class="assignee">
-      <span class="flex items-center justify-center avatar" [style.background-color]="avatarColor()">
+      <span
+        class="flex items-center justify-center avatar"
+        [style.background-color]="avatarColor()"
+      >
         {{ task().assignee.avatar }}
       </span>
       <span class="assignee-name">&#64;{{ assigneeFirstName() }}</span>

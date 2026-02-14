@@ -1,0 +1,41 @@
+@use 'variables' as *;
+
+p-select {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 2.5rem;
+  font-weight: 500;
+  color: $color-mine-shaft !important;
+  border: 0.0625rem solid $color-alto !important;
+  border-radius: 0.25rem !important;
+
+  .p-select-label {
+    font-size: 0.75rem !important;
+  }
+
+  .p-select-dropdown {
+    svg {
+      width: 0.75rem !important;
+      height: 0.75rem !important;
+    }
+  }
+
+  &:focus {
+    border: 0.0625rem solid $primary-color !important;
+  }
+}
+
+.p-overlay {
+  .p-select-list {
+    .p-select-option {
+      font-size: 0.75rem !important;
+
+      &.p-select-option-selected {
+        color: $primary-color !important;
+        background-color: $primary-color-lighter !important;
+      }
+    }
+  }
+}

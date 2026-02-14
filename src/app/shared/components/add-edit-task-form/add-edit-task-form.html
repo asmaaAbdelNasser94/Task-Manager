@@ -1,0 +1,5 @@
+<form [formGroup]="formGroup">
+  @for (field of formGroupList(); track field.formControlName) {
+    <task-manager-dynamic-form-field [field]="field" [form]="formGroup" />
+  }
+</form>

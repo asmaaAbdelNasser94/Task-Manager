@@ -1,5 +1,5 @@
 import { Component, computed, input } from '@angular/core';
-import { Task } from '../../../../../core/models/dashboard';
+import { Task } from '../../../../../core/models/dashboard.model';
 import { TaskStatus } from '../../../../../core/enums/dashboard.enum';
 import { StatusTasksContainer } from '../status-tasks-container/status-tasks-container';
 

@@ -1,9 +1,13 @@
 {
-  "_General_": {
+  "_General": {
     "appTitle": "Task Manager",
-    "searchPlaceholder": "Search ..."
+    "searchPlaceholder": "Search ...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit"
   },
-  "_Layout_": {
+  "_Layout": {
     "sideNav": {
       "dashboard": "Dashboard",
       "tasks": "Tasks",
@@ -11,12 +15,41 @@
       "analytics": "Analytics",
       "team": "Team",
       "settings": "Settings",
-      "newTask": "+ New Task"
+      "newTask": "New Task"
     }
   },
-  "_Dashboard_": {},
+  "_Dashboard": {
+    "totalTasks": "Total Tasks",
+    "inProgress": "In Progress",
+    "Overdue": "Overdue",
+    "completed": "Completed",
+    "thisWeek": "this week",
+    "today": "today",
+    "sameAsYesterday": "Same as yesterday"
+  },
+  "_Analytics": {
+    "tasksAnalytics": "Tasks Analytics"
+  },
   "_Shared": {
     "tasks": {
+      "addTask": "Add Task",
+      "editTask": "Edit Task",
+      "addEdit": {
+        "title": "Task Title",
+        "titlePlaceholder": "Enter task title",
+        "description": "Description",
+        "descriptionPlaceholder": "Enter task description",
+        "priority": "Priority",
+        "priorityPlaceholder": "Select priority",
+        "status": "Status",
+        "statusPlaceholder": "Select status",
+        "dueDate": "Due Date",
+        "dueDatePlaceholder": "Select due date",
+        "assignee": "Assignee",
+        "assigneePlaceholder": "Select assignee",
+        "tag": "Tag",
+        "tagPlaceholder": "Select tag"
+      },
       "status": {
         "all": "All",
         "todo": "To Do",

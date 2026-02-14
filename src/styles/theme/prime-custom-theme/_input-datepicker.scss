@@ -1,0 +1,16 @@
+@use 'variables' as *;
+
+.p-datepicker-panel {
+  .p-datepicker-header {
+    direction: ltr;
+  }
+
+  .p-datepicker-day-selected {
+    background-color: $primary-color !important;
+  }
+
+  .p-datepicker-day,
+  .p-datepicker-weekday {
+    font-size: 0.75rem;
+  }
+}

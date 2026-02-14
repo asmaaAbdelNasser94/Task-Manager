@@ -1,0 +1,13 @@
+@use 'variables' as *;
+
+.p-textarea {
+  font-size: 0.75rem !important;
+
+  &::placeholder {
+    font-size: 0.75rem !important;
+  }
+
+  &:focus {
+    border: 0.0625rem solid $primary-color !important;
+  }
+}

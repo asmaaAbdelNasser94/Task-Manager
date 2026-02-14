@@ -1,7 +1,7 @@
 import { Component, computed, input } from '@angular/core';
-import { Statistic, Task } from '../../../../core/models/dashboard';
-import { StatisticCard } from "../statistic-card/statistic-card";
-import { TaskBoard } from "../../../../shared/components/task-board/task-board";
+import { Statistic } from '../../../../core/models/dashboard.model';
+import { StatisticCard } from '../statistic-card/statistic-card';
+import { TaskBoard } from '../../../../shared/components/task-board/task-board';
 
 @Component({
   selector: 'task-manager-dashboard-page-container',
