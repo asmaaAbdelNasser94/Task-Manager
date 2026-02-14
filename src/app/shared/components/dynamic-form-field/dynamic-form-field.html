@@ -1,0 +1,77 @@
+<form class="field" [formGroup]="form()">
+  @if (field().type === fieldType.CUSTOM && field().template) {
+    <ng-container *ngTemplateOutlet="field().template!; context: { form: form() }"> </ng-container>
+  } @else {
+    @if (field().label) {
+      <label class="field-label" [for]="field().formControlName"> {{ field().label }} </label>
+      @if (field().required) {
+        <span class="required-control-flag">*</span>
+      }
+    }
+    <div class="field-input">
+      @switch (field().type) {
+        @case (fieldType.TEXT) {
+          <input
+            pInputText
+            [name]="field().formControlName"
+            class="w-full"
+            [formControlName]="field().formControlName"
+            [placeholder]="field().placeholder"
+          />
+        }
+
+        @case (fieldType.TEXTAREA) {
+          <textarea
+            pTextarea
+            [name]="field().formControlName"
+            class="w-full"
+            [formControlName]="field().formControlName"
+            [placeholder]="field().placeholder"
+            [rows]="4"
+            cols="30"
+          >
+          </textarea>
+        }
+
+        @case (fieldType.SELECT) {
+          <p-select
+            [name]="field().formControlName"
+            class="w-full"
+            [options]="field().options"
+            [optionLabel]="field().optionLabel"
+            [optionValue]="field().optionValue"
+            [formControlName]="field().formControlName"
+            [placeholder]="field().placeholder"
+            [appendTo]="'body'"
+          >
+          </p-select>
+        }
+
+        @case (fieldType.MULTISELECT) {
+          <p-multiSelect
+            [name]="field().formControlName"
+            class="w-full"
+            [options]="field().options"
+            [optionLabel]="field().optionLabel"
+            [formControlName]="field().formControlName"
+            [appendTo]="'body'"
+          >
+          </p-multiSelect>
+        }
+
+        @case (fieldType.DATE) {
+          <p-datepicker
+            [name]="field().formControlName"
+            class="w-full"
+            [placeholder]="field().placeholder"
+            dateFormat="yy-mm-dd"
+            [formControlName]="field().formControlName"
+            [appendTo]="'body'"
+            [readonlyInput]="true"
+          >
+          </p-datepicker>
+        }
+      }
+    </div>
+  }
+</form>

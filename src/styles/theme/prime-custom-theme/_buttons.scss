@@ -1,0 +1,45 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+p-button {
+  .p-button {
+    font-size: 0.8125rem;
+    direction: ltr;
+    height: 2rem;
+
+    &.p-button-primary {
+      width: 7.3913rem;
+      background-color: $primary-color;
+      border-color: $primary-color;
+      transition:
+        background-color 0.5s ease,
+        border-color 0.5s ease;
+
+      &:hover {
+        background-color: $primary-color-hover;
+        border-color: $primary-color-hover;
+        color: $color-white;
+      }
+
+      &:disabled {
+        color: $color-boulder;
+        background-color: $color-alto;
+        border-color: $color-alto;
+      }
+    }
+
+    &.p-button-secondary {
+      &.cancel {
+        width: 7.3913rem;
+      }
+    }
+
+    &.full-width {
+      width: 100% !important;
+    }
+
+    .p-button-icon {
+      font-size: 0.75rem;
+    }
+  }
+}

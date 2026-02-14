@@ -1,0 +1,17 @@
+<p-card class="statistic-card">
+    @if(!loading()) {
+    <div class="flex items-center gap-2">
+        <span class="statistic-icon">{{data()?.icon}}</span> <span class="statistic-title">{{data()?.title | translate}}</span>
+    </div>
+    <div class="statistic-value">
+        {{data()?.value}}
+    </div>
+    <div [class]="'statistic-change' + ' ' + changeTypeClassMap[data()?.changeType!]">
+        {{data()?.change}} {{data()?.changeLabel | translate}}
+    </div>
+    }@else {
+    <p-skeleton height="1.5rem"></p-skeleton>
+    <p-skeleton height="2.6rem"></p-skeleton>
+    <p-skeleton height="1rem"></p-skeleton>
+    }
+</p-card>

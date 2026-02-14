@@ -1,0 +1,28 @@
+@use 'variables' as *;
+
+p-dialog {
+  .p-dialog {
+    .p-dialog-header {
+      padding: 0;
+      padding: 0.875rem 1.25rem !important;
+      border-bottom: 0.0625rem solid $color-alto;
+      // margin-block-end: 1rem;
+
+      .p-dialog-title {
+        font-size: 1rem;
+        font-weight: 500;
+        color: $color-mine-shaft;
+      }
+    }
+
+    .p-dialog-content {
+      padding: 0.875rem 1.25rem !important;
+    }
+
+    .p-dialog-footer {
+      border-top: 0.0625rem solid $color-alto;
+      justify-content: center;
+      padding-block-start: 1rem !important;
+    }
+  }
+}

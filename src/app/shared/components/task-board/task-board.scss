@@ -1,0 +1,41 @@
+@use 'variables' as *;
+
+:host {
+    .task-board-tasks-filter {
+        background-color: $color-white;
+        padding: 1rem;
+        box-shadow: $box-shadow-light;
+        border-radius: .5rem;
+
+        .task-board-select-button {
+            ::ng-deep {
+                .p-togglebutton {
+                    background-color: transparent !important;
+                    padding: 0;
+                    border: none;
+
+                    .p-togglebutton-label {
+                        font-size: .8313rem;
+                        color: $color-mine-shaft !important;
+                    }
+
+                    .p-togglebutton-content {
+                        padding: .5rem 1rem;
+                    }
+
+                    &.p-togglebutton-checked {
+                        .p-togglebutton-label {
+                            font-weight: 400;
+                            color: $color-white !important;
+                        }
+
+                        .p-togglebutton-content {
+                            background-color: $primary-color !important;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

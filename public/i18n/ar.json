@@ -1,0 +1,79 @@
+{
+  "_General": {
+    "appTitle": "مدير المهام",
+    "searchPlaceholder": "بحث ...",
+    "save": "حفظ",
+    "cancel": "الغاء",
+    "delete": "حذف",
+    "edit": "تعديل"
+  },
+  "_Layout": {
+    "sideNav": {
+      "dashboard": "لوحة التحكم",
+      "tasks": "المهام",
+      "calendar": "التقويم",
+      "analytics": "التحليلات",
+      "team": "الفريق",
+      "settings": "الإعدادات",
+      "newTask": "مهمة جديدة"
+    }
+  },
+  "_Dashboard": {
+    "totalTasks": "مجموع المهام",
+    "inProgress": "قيد التنفيذ",
+    "Overdue": "متأخرة",
+    "completed": "مكتملة",
+    "thisWeek": "هذا الأسبوع",
+    "today": "اليوم",
+    "sameAsYesterday": "مثل الأمس"
+  },
+  "_Analytics": {
+    "tasksAnalytics": "تحليل المهام"
+  },
+  "_Shared": {
+    "tasks": {
+      "addTask": "اضافة مهمة",
+      "editTask": "تعديل مهمة",
+      "addEdit": {
+        "title": "عنوان المهمة",
+        "titlePlaceholder": "أدخل عنوان المهمة",
+        "description": "الوصف",
+        "descriptionPlaceholder": "أدخل وصف المهمة",
+        "priority": "الأولوية",
+        "priorityPlaceholder": "اختر الأولوية",
+        "status": "الحالة",
+        "statusPlaceholder": "اختر الحالة",
+        "dueDate": "تاريخ الاستحقاق",
+        "dueDatePlaceholder": "اختر تاريخ الاستحقاق",
+        "assignee": "الموظف",
+        "assigneePlaceholder": "اختر الموظف",
+        "tag": "التصنيف",
+        "tagPlaceholder": "اختر التصنيف"
+      },
+      "status": {
+        "all": "الكل",
+        "todo": "لم يتم التنفيذ",
+        "in_progress": "قيد التنفيذ",
+        "done": "مكتملة"
+      },
+      "priority": {
+        "title": "الاولوية",
+        "low": "منخفضة",
+        "medium": "متوسطة",
+        "high": "عالية",
+        "all": "الكل"
+      },
+      "date": {
+        "completedToday": "اكتمل اليوم",
+        "completedYesterday": "اكتمل أمس",
+        "completedDaysAgo": "اكتمل منذ {{days}} أيام",
+        "overdueBy": "متأخر بـ {{days}} أيام",
+        "dueToday": "مستحق اليوم",
+        "dueTomorrow": "مستحق غداً",
+        "dueInDays": "مستحق خلال {{days}} أيام",
+        "dueInWeek": "مستحق خلال أسبوع",
+        "dueInWeeks": "مستحق خلال {{weeks}} أسابيع"
+      }
+    }
+  }
+}

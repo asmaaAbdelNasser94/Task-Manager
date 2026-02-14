@@ -1,6 +1,7 @@
-@use "./theme/shared/css3Variables";
-@use "./theme/theme";
-@use "./fonts/font";
+@use './theme/shared/css3Variables';
+@use './theme/shared/variables';
+@use './theme/prime-custom-theme';
+@use './fonts/font';
 
 /* ===== Global Styles ===== */
 
@@ -21,4 +22,31 @@ body {
   height: 100%;
   overflow: hidden;
   font-size: var(--basic-font-size);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.3125rem;
+  height: 0.3125rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #d9d9d94d;
+  border-radius: 0.5625rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+  border-radius: 0.5625rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #d4d4d4;
+}
+
+.pi {
+  font-family: 'primeicons' !important;
 }

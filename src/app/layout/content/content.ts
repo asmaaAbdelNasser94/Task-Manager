@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-content',
+  selector: 'task-manager-content',
   imports: [],
   templateUrl: './content.html',
   styleUrl: './content.scss',

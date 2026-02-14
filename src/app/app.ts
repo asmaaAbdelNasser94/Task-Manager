@@ -1,12 +1,10 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { LanguageService } from './shared/services/language.service';
-import { button } from '@primeuix/themes/aura/inputnumber';
-import { ButtonModule } from 'primeng/button';
-
+import { MainRoutingModule } from "./main/main-routing.module";
 @Component({
-  selector: 'app-root',
-  imports: [TranslateModule],
+  selector: 'task-manager-root',
+  imports: [TranslateModule, MainRoutingModule],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

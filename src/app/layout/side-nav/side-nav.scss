@@ -1,0 +1,63 @@
+@use 'variables' as *;
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.side-nav {
+  background-color: $color-white;
+  height: 100%;
+  padding: 1.5rem;
+  box-shadow: $box-shadow-light;
+}
+
+// PanelMenu overrides
+::ng-deep {
+  .side-nav-panel-menu {
+    &.p-panelmenu {
+      padding: 0;
+      gap: .25rem;
+    }
+
+    .p-panelmenu-panel {
+      border: none;
+      box-shadow: none;
+      margin-bottom: 0;
+    }
+
+    // Top-level header items (flat items without children)
+    .p-panelmenu-header {
+
+      .p-panelmenu-header-link {
+        height: 2.8125rem;
+        padding-inline-start: 1rem;
+        gap: 0.5rem;
+        color: $color-mine-shaft;
+        font-size: .825rem;
+        font-weight: 400;
+        border-radius: 0.25rem;
+        transition: background-color 0.2s ease, color 0.2s ease;
+
+        &:hover {
+          background-color: $color-black-5;
+        }
+
+        // Active state via PrimeNG router link
+        &.p-panelmenu-item-link-active {
+          background-color: $primary-color !important;
+          color: $color-white !important;
+        }
+      }
+
+      .p-menuitem-badge {
+        order: 1;
+      }
+
+      .p-panelmenu-header-label {
+        order: 2;
+      }
+
+    }
+  }
+}
