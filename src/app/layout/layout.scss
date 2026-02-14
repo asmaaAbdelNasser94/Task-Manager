@@ -1,17 +1,23 @@
 @use 'variables' as *;
+@use 'mixins' as *;
 
 :host {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    background-color: $bg-weak-100;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: $bg-weak-100;
 }
 
 .layout-sidebar {
-    width: 15rem;
+  width: 15rem;
+
+  @include respond-to-Xsmall() {
+    max-width: 5rem;
+    overflow: hidden;
+  }
 }
 
 .layout-content {
-    padding: 2rem;
+  padding: 2rem;
 }

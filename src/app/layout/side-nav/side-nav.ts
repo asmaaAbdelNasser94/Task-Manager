@@ -7,10 +7,11 @@ import { sideMenuItems } from './side-nav-menu-items';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Dialog } from 'primeng/dialog';
 import { AddEditTaskForm } from '../../shared/components/add-edit-task-form/add-edit-task-form';
+import { Tooltip } from 'primeng/tooltip';
 
 @Component({
   selector: 'task-manager-side-nav',
-  imports: [TranslateModule, PanelMenuModule, Button, Dialog, AddEditTaskForm],
+  imports: [TranslateModule, PanelMenuModule, Button, Dialog, AddEditTaskForm, Tooltip],
   templateUrl: './side-nav.html',
   styleUrl: './side-nav.scss',
 })

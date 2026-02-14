@@ -1,4 +1,4 @@
-import { Component, computed, input } from '@angular/core';
+import { Component, computed, input, output } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { Task } from '../../../../../core/models/dashboard.model';
 import { TaskCard } from '../task-card/task-card';
@@ -10,6 +10,9 @@ import { TaskCard } from '../task-card/task-card';
   styleUrl: './status-tasks-container.scss',
 })
 export class StatusTasksContainer {
+  public onEditTask = output<Task>();
+  public onDeleteTask = output<Task>();
+
   public tasks = input.required<Task[]>();
   public taskStatus = input.required<string>();
 
