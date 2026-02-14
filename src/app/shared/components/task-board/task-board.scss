@@ -1,41 +1,61 @@
 @use 'variables' as *;
+@use 'mixins' as *;
 
 :host {
-    .task-board-tasks-filter {
-        background-color: $color-white;
-        padding: 1rem;
-        box-shadow: $box-shadow-light;
-        border-radius: .5rem;
+  .task-board-tasks-filter {
+    background-color: $color-white;
+    padding: 1rem;
+    box-shadow: $box-shadow-light;
+    border-radius: 0.5rem;
 
-        .task-board-select-button {
-            ::ng-deep {
-                .p-togglebutton {
-                    background-color: transparent !important;
-                    padding: 0;
-                    border: none;
+    @include respond-to-Xsmall() {
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+    }
 
-                    .p-togglebutton-label {
-                        font-size: .8313rem;
-                        color: $color-mine-shaft !important;
-                    }
+    @include respond-to-small() {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
 
-                    .p-togglebutton-content {
-                        padding: .5rem 1rem;
-                    }
+    .task-board-select-button {
+        @include respond-to-Xsmall() {
+          flex-direction: column;
+        }
 
-                    &.p-togglebutton-checked {
-                        .p-togglebutton-label {
-                            font-weight: 400;
-                            color: $color-white !important;
-                        }
+        @include respond-to-small() {
+          flex-direction: column;
+        }
+      ::ng-deep {
+        .p-togglebutton {
+          background-color: transparent !important;
+          padding: 0;
+          border: none;
 
-                        .p-togglebutton-content {
-                            background-color: $primary-color !important;
-                        }
-                    }
-                }
+
+          .p-togglebutton-label {
+            font-size: 0.8313rem;
+            color: $color-mine-shaft !important;
+          }
+
+          .p-togglebutton-content {
+            padding: 0.5rem 1rem;
+          }
+
+          &.p-togglebutton-checked {
+            .p-togglebutton-label {
+              font-weight: 400;
+              color: $color-white !important;
             }
 
+            .p-togglebutton-content {
+              background-color: $primary-color !important;
+            }
+          }
         }
+      }
     }
+  }
 }

@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'mixins' as *;
 
 :host {
   display: block;
@@ -11,11 +12,25 @@
     box-shadow: $box-shadow-light;
     border-radius: 0;
 
-    .p-toolbar-center {
-      flex: 1;
-      justify-content: center;
-      max-width: 28rem;
-      margin: 0 auto;
+    ::ng-deep {
+      .p-toolbar-center {
+        flex: 1;
+        justify-content: center;
+        max-width: 28rem;
+        margin: 0 auto;
+
+        @include respond-to-Xsmall() {
+          display: none !important;
+        }
+
+        @include respond-to-small() {
+          display: none !important;
+        }
+
+        @include respond-to-medium() {
+          display: none !important;
+        }
+      }
     }
 
     .logo-wrapper {

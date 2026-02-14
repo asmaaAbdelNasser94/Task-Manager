@@ -21,29 +21,41 @@
         type="button"
         severity="primary"
         [label]="'_Layout.sideNav.newTask' | translate"
-        (click)="showAddEditTaskFormDialog = true"
+        (click)="openAddDialog()"
         icon="pi pi-plus"
+        [pTooltip]="'_Layout.sideNav.newTask' | translate"
+        tooltipStyleClass="mobile-tooltip"
+        tooltipPosition="bottom"
       ></p-button>
     </div>
   </div>
 
   <div class="w-full task-board-tasks-container">
-    <task-manager-tasks-container [tasks]="filteredTasks()" [selectedStatus]="selectedTaskStatus" />
+    <task-manager-tasks-container
+      [tasks]="filteredTasks()"
+      [selectedStatus]="selectedTaskStatus"
+      (onEditTask)="openEditDialog($event)"
+      (onDeleteTask)="handleDeleteTask($event)"
+    />
   </div>
 </div>
 
 <p-dialog
-  [header]="'_Shared.tasks.addTask' | translate"
+  [header]="
+    (addEditTaskForm?.isEditMode ? '_Shared.tasks.editTask' : '_Shared.tasks.addTask') | translate
+  "
   [modal]="true"
   [(visible)]="showAddEditTaskFormDialog"
   [breakpoints]="{ '1199px': '75vw', '35.93rem': '90vw' }"
   [style]="{ width: '35rem' }"
   [draggable]="false"
   [resizable]="false"
+  (onHide)="onDialogHide()"
 >
   <task-manager-add-edit-task-form
     #addEditTaskForm
     (onCancel)="showAddEditTaskFormDialog = false"
+    (onSubmit)="handleFormSubmit($event)"
   />
   <ng-template #footer>
     <div class="flex flex-row gap-6 form-actions">
@@ -64,3 +76,5 @@
     </div>
   </ng-template>
 </p-dialog>
+
+<p-confirmDialog />

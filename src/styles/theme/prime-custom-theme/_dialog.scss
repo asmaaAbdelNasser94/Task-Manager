@@ -26,3 +26,8 @@ p-dialog {
     }
   }
 }
+::ng-deep {
+  .p-confirmdialog {
+    background-color: aquamarine;
+  }
+}

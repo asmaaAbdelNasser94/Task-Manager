@@ -9,14 +9,18 @@
     }
   }
 
-  .field-label {
-    margin-bottom: 0.75rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: $color-mine-shaft;
-  }
+  .field-label-container {
+    margin-block-end: 0.5rem;
 
-  .required-control-flag {
-    color: $primary-color;
+    .field-label {
+      margin-bottom: 0.75rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: $color-mine-shaft;
+    }
+
+    .required-control-flag {
+      color: $primary-color;
+    }
   }
 }
